@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyNova — Study Together, Grow Together</title>
+<style>
+:root{--bg:#0b1020;--card:#121a2f;--card2:#18223b;--text:#f7f9ff;--muted:#9aa7c2;--accent:#7c5cff;--accent2:#23d5ab;--line:#26324f}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at 85% 10%,#2b1d69 0,transparent 28%),var(--bg);color:var(--text)}
+header{position:sticky;top:0;z-index:5;background:rgba(11,16,32,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:24px;font-weight:900}.logo span{color:var(--accent2)}nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:14px}nav a:hover{color:white}
+.hero{max-width:1180px;margin:0 auto;padding:70px 22px 45px;display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}.tag{color:var(--accent2);font-weight:800;letter-spacing:1px;text-transform:uppercase;font-size:12px}h1{font-size:clamp(42px,7vw,78px);line-height:.98;margin:14px 0}h1 span{color:var(--accent)}.hero p{color:var(--muted);font-size:18px;max-width:650px;line-height:1.7}.buttons{display:flex;gap:12px;margin-top:25px}.btn{border:0;border-radius:12px;padding:13px 18px;font-weight:800;cursor:pointer}.primary{background:var(--accent);color:white}.secondary{background:var(--card2);color:white;border:1px solid var(--line)}
+.dashboard{background:linear-gradient(145deg,#171f39,#0e1529);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 20px 60px #0005}.dash-top{display:flex;justify-content:space-between;color:var(--muted);font-size:13px}.orb{height:170px;border-radius:20px;margin:18px 0;background:radial-gradient(circle at 50% 45%,#9c8bff,transparent 12%),radial-gradient(circle,#5e42e8 0,transparent 48%),#111936;display:grid;place-items:center}.orb strong{font-size:42px}.mini{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini div{background:var(--card2);padding:14px;border-radius:14px}.mini b{font-size:20px}.mini small{display:block;color:var(--muted);margin-top:4px}
+section{max-width:1180px;margin:auto;padding:45px 22px}.section-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:22px}.section-title h2{margin:0;font-size:30px}.section-title p{margin:6px 0 0;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;transition:.2s}.card:hover{transform:translateY(-3px);border-color:#4b5e8c}.icon{font-size:30px}.card h3{margin:14px 0 7px}.card p{color:var(--muted);line-height:1.5;font-size:14px}.progress{height:7px;background:#26314c;border-radius:10px;overflow:hidden;margin-top:14px}.progress i{display:block;height:100%;background:var(--accent2);border-radius:10px}
+.content{display:grid;grid-template-columns:1fr 1fr;gap:15px}.task{display:flex;align-items:center;gap:13px;padding:15px 0;border-bottom:1px solid var(--line)}.task:last-child{border:0}.check{width:20px;height:20px;border:2px solid #526383;border-radius:6px;cursor:pointer}.task.done .check{background:var(--accent2);border-color:var(--accent2)}.task.done span{text-decoration:line-through;color:#64718b}.task small{display:block;color:var(--muted);margin-top:3px}
+footer{border-top:1px solid var(--line);padding:30px 22px;text-align:center;color:var(--muted);margin-top:30px}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:45px}.grid{grid-template-columns:1fr 1fr}.content{grid-template-columns:1fr}nav a{margin-left:10px}nav a:nth-child(n+3){display:none}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.nav{padding:14px 16px}section{padding:35px 16px}.hero{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="logo">Study<span>Nova</span> 🚀</div><nav><a href="#subjects">Subjects</a><a href="#tasks">Tasks</a><a href="#resources">Resources</a><a href="#about">About</a></nav></div></header>
+
+<main>
+<section class="hero">
+<div><div class="tag">Your study universe</div><h1>Learn more.<br><span>Achieve more.</span></h1><p>StudyNova is a shared space for your study group to organize subjects, track tasks, discover resources, and learn together.</p><div class="buttons"><button class="btn primary" onclick="document.querySelector('#subjects').scrollIntoView({behavior:'smooth'})">Explore Subjects</button><button class="btn secondary" onclick="document.querySelector('#tasks').scrollIntoView({behavior:'smooth'})">View Tasks</button></div></div>
+<div class="dashboard"><div class="dash-top"><span>GROUP DASHBOARD</span><span>● ONLINE</span></div><div class="orb"><strong>72%</strong></div><div class="mini"><div><b>8</b><small>Subjects</small></div><div><b>24</b><small>Resources</small></div><div><b>12</b><small>Tasks</small></div><div><b>7</b><small>Study Days</small></div></div></div>
+</section>
+
+<section id="subjects"><div class="section-title"><div><h2>📚 Subjects</h2><p>Everything your group studies, in one place.</p></div></div><div class="grid">
+<div class="card"><div class="icon">🔢</div><h3>Mathematics</h3><p>Algebra, geometry, calculus & problem solving.</p><div class="progress"><i style="width:78%"></i></div></div>
+<div class="card"><div class="icon">🔬</div><h3>Science</h3><p>Physics, chemistry, biology & experiments.</p><div class="progress"><i style="width:64%"></i></div></div>
+<div class="card"><div class="icon">🌍</div><h3>Social Studies</h3><p>History, geography, civics & economics.</p><div class="progress"><i style="width:55%"></i></div></div>
+<div class="card"><div class="icon">💻</div><h3>Computer Science</h3><p>Programming, web development & technology.</p><div class="progress"><i style="width:70%"></i></div></div>
+<div class="card"><div class="icon">📖</div><h3>Languages</h3><p>English, Hindi and other language practice.</p><div class="progress"><i style="width:61%"></i></div></div>
+<div class="card"><div class="icon">🎨</div><h3>Creative Arts</h3><p>Art, design, music and creative projects.</p><div class="progress"><i style="width:42%"></i></div></div>
+<div class="card"><div class="icon">🧠</div><h3>General Knowledge</h3><p>Quizzes, current topics and useful facts.</p><div class="progress"><i style="width:49%"></i></div></div>
+<div class="card"><div class="icon">➕</div><h3>More</h3><p>Add any subject your group needs.</p><div class="progress"><i style="width:20%"></i></div></div>
+</div></section>
+
+<section id="tasks"><div class="section-title"><div><h2>✅ Group Tasks</h2><p>Tap a task when your group completes it.</p></div></div><div class="content">
+<div class="card"><h3>Today's Focus</h3><div class="task"><div class="check" onclick="toggleTask(this)"></div><div><b>Complete algebra practice</b><small>Mathematics · Today</small></div></div><div class="task"><div class="check" onclick="toggleTask(this)"></div><div><b>Review chapter 4 notes</b><small>Science · Today</small></div></div><div class="task"><div class="check" onclick="toggleTask(this)"></div><div><b>Finish coding challenge</b><small>Computer Science · Today</small></div></div></div>
+<div class="card" id="resources"><h3>🌐 Quick Resources</h3><div class="task"><span>📘</span><div><b>Shared Notes</b><small>Put your group's notes here</small></div></div><div class="task"><span>🧩</span><div><b>Practice Quizzes</b><small>Create quizzes for revision</small></div></div><div class="task"><span>📅</span><div><b>Study Calendar</b><small>Plan tests and study sessions</small></div></div></div>
+</div></section>
+
+<section id="about"><div class="card"><h2>🚀 About StudyNova</h2><p>StudyNova is designed to turn a normal study group into a small learning community. Start with this dashboard, then we can add login, member profiles, a database, file uploads, chat, real quizzes, and an admin panel.</p></div></section>
+</main>
+<footer>© 2026 StudyNova · Study together. Grow together. 🚀</footer>
+<script>
+function toggleTask(el){el.parentElement.classList.toggle('done')}
+</script>
+</body>
+</html>
